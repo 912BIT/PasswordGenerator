@@ -51,5 +51,61 @@ namespace PasswordGenerator
         {
             CheckDefaultOptions();
         }
+
+        private enum Option { Letters, Numbers, Upper, Lower, Special }
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            if (nudLength.Value > 0)
+            {
+                List<Option> options = new List<Option>(5);
+
+                if (chkbxLetters.Checked)
+                {
+                    if (chkbxUpper.Checked)
+                    {
+                        options.Add(Option.Upper);
+                    }
+                    if (chkbxLower.Checked)
+                    {
+                        options.Add(Option.Lower);
+                    }
+                }
+                if (chkbxNumbers.Checked)
+                {
+                    options.Add(Option.Numbers);
+                }
+
+                if (chkbxSpecial.Checked)
+                {
+                    options.Add(Option.Special);
+                }
+
+                string letters = "abcdefghijklmnopqrstuvwxyz";
+                string password = string.Empty;
+                Random rnd = new Random();
+                Option rndOption;
+
+                for (int i = 0; i < nudLength.Value; i++)
+                {
+                    rndOption = options[rnd.Next(0, options.Count)];
+
+                    switch (rndOption)
+                    {
+                        case Option.Numbers:
+                            password += rnd.Next(0, 10).ToString(); //[0; 9]
+                            break;
+                        case Option.Upper:
+                            password += letters[rnd.Next(0, letters.Length)].ToString().ToUpper();
+                            break;
+                        case Option.Lower:
+                            password += letters[rnd.Next(0, letters.Length)];
+                            break;
+                        case Option.Special:
+                            break;
+                    }
+                }
+                txbPasswords.Text = password;
+            }
+        }
     }
 }

@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbPasswords = new System.Windows.Forms.TextBox();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.chkbxLetters = new System.Windows.Forms.CheckBox();
             this.chkbxNumbers = new System.Windows.Forms.CheckBox();
             this.chkbxSpecial = new System.Windows.Forms.CheckBox();
             this.chkbxUpper = new System.Windows.Forms.CheckBox();
             this.chkbxLower = new System.Windows.Forms.CheckBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudLength = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.chkbxDefault = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLength)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txbPasswords
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(612, 304);
-            this.textBox1.TabIndex = 0;
+            this.txbPasswords.Location = new System.Drawing.Point(12, 12);
+            this.txbPasswords.Multiline = true;
+            this.txbPasswords.Name = "txbPasswords";
+            this.txbPasswords.Size = new System.Drawing.Size(612, 304);
+            this.txbPasswords.TabIndex = 0;
             // 
             // btnGenerate
             // 
@@ -57,6 +57,7 @@
             this.btnGenerate.TabIndex = 1;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
             // chkbxLetters
             // 
@@ -108,17 +109,17 @@
             this.chkbxLower.Text = "Lower case";
             this.chkbxLower.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // nudLength
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(12, 391);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nudLength.Location = new System.Drawing.Point(12, 391);
+            this.nudLength.Maximum = new decimal(new int[] {
             300,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(80, 21);
-            this.numericUpDown1.TabIndex = 7;
+            this.nudLength.Name = "nudLength";
+            this.nudLength.Size = new System.Drawing.Size(80, 21);
+            this.nudLength.TabIndex = 7;
             // 
             // label1
             // 
@@ -148,17 +149,17 @@
             this.ClientSize = new System.Drawing.Size(636, 509);
             this.Controls.Add(this.chkbxDefault);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nudLength);
             this.Controls.Add(this.chkbxLower);
             this.Controls.Add(this.chkbxUpper);
             this.Controls.Add(this.chkbxSpecial);
             this.Controls.Add(this.chkbxNumbers);
             this.Controls.Add(this.chkbxLetters);
             this.Controls.Add(this.btnGenerate);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbPasswords);
             this.Name = "MainForm";
             this.Text = "Password Generator";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLength)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,14 +167,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbPasswords;
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.CheckBox chkbxLetters;
         private System.Windows.Forms.CheckBox chkbxNumbers;
         private System.Windows.Forms.CheckBox chkbxSpecial;
         private System.Windows.Forms.CheckBox chkbxUpper;
         private System.Windows.Forms.CheckBox chkbxLower;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudLength;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkbxDefault;
     }
