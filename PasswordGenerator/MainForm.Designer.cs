@@ -46,6 +46,8 @@
             // 
             // btnGenerate
             // 
+            this.btnGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenerate.Location = new System.Drawing.Point(12, 439);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(612, 58);
@@ -56,6 +58,7 @@
             // 
             // chkbxLetters
             // 
+            this.chkbxLetters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkbxLetters.AutoSize = true;
             this.chkbxLetters.Location = new System.Drawing.Point(79, 260);
             this.chkbxLetters.Name = "chkbxLetters";
@@ -67,6 +70,7 @@
             // 
             // chkbxNumbers
             // 
+            this.chkbxNumbers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkbxNumbers.AutoSize = true;
             this.chkbxNumbers.Location = new System.Drawing.Point(304, 260);
             this.chkbxNumbers.Name = "chkbxNumbers";
@@ -77,6 +81,7 @@
             // 
             // chkbxSpecial
             // 
+            this.chkbxSpecial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkbxSpecial.AutoSize = true;
             this.chkbxSpecial.Location = new System.Drawing.Point(185, 260);
             this.chkbxSpecial.Name = "chkbxSpecial";
@@ -87,6 +92,7 @@
             // 
             // chkbxUpper
             // 
+            this.chkbxUpper.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkbxUpper.AutoSize = true;
             this.chkbxUpper.Location = new System.Drawing.Point(99, 283);
             this.chkbxUpper.Name = "chkbxUpper";
@@ -97,6 +103,7 @@
             // 
             // chkbxLower
             // 
+            this.chkbxLower.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkbxLower.AutoSize = true;
             this.chkbxLower.Location = new System.Drawing.Point(99, 306);
             this.chkbxLower.Name = "chkbxLower";
@@ -107,6 +114,7 @@
             // 
             // nudLength
             // 
+            this.nudLength.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.nudLength.Location = new System.Drawing.Point(12, 336);
             this.nudLength.Maximum = new decimal(new int[] {
             300,
@@ -124,6 +132,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.Location = new System.Drawing.Point(98, 338);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 21);
@@ -132,6 +141,7 @@
             // 
             // chkbxDefault
             // 
+            this.chkbxDefault.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkbxDefault.AutoSize = true;
             this.chkbxDefault.Checked = true;
             this.chkbxDefault.CheckState = System.Windows.Forms.CheckState.Checked;
@@ -145,6 +155,7 @@
             // 
             // nudCount
             // 
+            this.nudCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.nudCount.Location = new System.Drawing.Point(12, 374);
             this.nudCount.Maximum = new decimal(new int[] {
             10000,
@@ -162,6 +173,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.Location = new System.Drawing.Point(98, 376);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 21);
@@ -170,6 +182,9 @@
             // 
             // txbPasswords
             // 
+            this.txbPasswords.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txbPasswords.Location = new System.Drawing.Point(12, 12);
             this.txbPasswords.MaxLength = 3100000;
             this.txbPasswords.Name = "txbPasswords";
@@ -194,6 +209,7 @@
             this.Controls.Add(this.chkbxNumbers);
             this.Controls.Add(this.chkbxLetters);
             this.Controls.Add(this.btnGenerate);
+            this.MinimumSize = new System.Drawing.Size(407, 453);
             this.Name = "MainForm";
             this.Text = "Password Generator";
             ((System.ComponentModel.ISupportInitialize)(this.nudLength)).EndInit();

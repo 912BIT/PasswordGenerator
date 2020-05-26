@@ -120,5 +120,6 @@ namespace PasswordGenerator
             chkbxLower.Enabled = status;
             chkbxUpper.Enabled = status;
         }
+
     }
 }
