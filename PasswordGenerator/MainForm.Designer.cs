@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txbPasswords = new System.Windows.Forms.TextBox();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.chkbxLetters = new System.Windows.Forms.CheckBox();
             this.chkbxNumbers = new System.Windows.Forms.CheckBox();
@@ -38,16 +37,12 @@
             this.nudLength = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.chkbxDefault = new System.Windows.Forms.CheckBox();
+            this.nudCount = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txbPasswords = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudLength)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCount)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txbPasswords
-            // 
-            this.txbPasswords.Location = new System.Drawing.Point(12, 12);
-            this.txbPasswords.Multiline = true;
-            this.txbPasswords.Name = "txbPasswords";
-            this.txbPasswords.Size = new System.Drawing.Size(612, 242);
-            this.txbPasswords.TabIndex = 0;
             // 
             // btnGenerate
             // 
@@ -62,7 +57,7 @@
             // chkbxLetters
             // 
             this.chkbxLetters.AutoSize = true;
-            this.chkbxLetters.Location = new System.Drawing.Point(12, 283);
+            this.chkbxLetters.Location = new System.Drawing.Point(79, 260);
             this.chkbxLetters.Name = "chkbxLetters";
             this.chkbxLetters.Size = new System.Drawing.Size(60, 17);
             this.chkbxLetters.TabIndex = 2;
@@ -73,7 +68,7 @@
             // chkbxNumbers
             // 
             this.chkbxNumbers.AutoSize = true;
-            this.chkbxNumbers.Location = new System.Drawing.Point(12, 375);
+            this.chkbxNumbers.Location = new System.Drawing.Point(304, 260);
             this.chkbxNumbers.Name = "chkbxNumbers";
             this.chkbxNumbers.Size = new System.Drawing.Size(68, 17);
             this.chkbxNumbers.TabIndex = 3;
@@ -83,7 +78,7 @@
             // chkbxSpecial
             // 
             this.chkbxSpecial.AutoSize = true;
-            this.chkbxSpecial.Location = new System.Drawing.Point(12, 352);
+            this.chkbxSpecial.Location = new System.Drawing.Point(185, 260);
             this.chkbxSpecial.Name = "chkbxSpecial";
             this.chkbxSpecial.Size = new System.Drawing.Size(113, 17);
             this.chkbxSpecial.TabIndex = 4;
@@ -93,7 +88,7 @@
             // chkbxUpper
             // 
             this.chkbxUpper.AutoSize = true;
-            this.chkbxUpper.Location = new System.Drawing.Point(31, 306);
+            this.chkbxUpper.Location = new System.Drawing.Point(99, 283);
             this.chkbxUpper.Name = "chkbxUpper";
             this.chkbxUpper.Size = new System.Drawing.Size(80, 17);
             this.chkbxUpper.TabIndex = 5;
@@ -103,7 +98,7 @@
             // chkbxLower
             // 
             this.chkbxLower.AutoSize = true;
-            this.chkbxLower.Location = new System.Drawing.Point(31, 329);
+            this.chkbxLower.Location = new System.Drawing.Point(99, 306);
             this.chkbxLower.Name = "chkbxLower";
             this.chkbxLower.Size = new System.Drawing.Size(80, 17);
             this.chkbxLower.TabIndex = 6;
@@ -112,7 +107,7 @@
             // 
             // nudLength
             // 
-            this.nudLength.Location = new System.Drawing.Point(12, 398);
+            this.nudLength.Location = new System.Drawing.Point(12, 336);
             this.nudLength.Maximum = new decimal(new int[] {
             300,
             0,
@@ -121,10 +116,15 @@
             this.nudLength.Name = "nudLength";
             this.nudLength.Size = new System.Drawing.Size(80, 21);
             this.nudLength.TabIndex = 7;
+            this.nudLength.Value = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(98, 400);
+            this.label1.Location = new System.Drawing.Point(98, 338);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 21);
             this.label1.TabIndex = 8;
@@ -143,11 +143,48 @@
             this.chkbxDefault.UseVisualStyleBackColor = true;
             this.chkbxDefault.CheckStateChanged += new System.EventHandler(this.chkbxDefault_CheckStateChanged);
             // 
+            // nudCount
+            // 
+            this.nudCount.Location = new System.Drawing.Point(12, 374);
+            this.nudCount.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudCount.Name = "nudCount";
+            this.nudCount.Size = new System.Drawing.Size(80, 21);
+            this.nudCount.TabIndex = 10;
+            this.nudCount.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(98, 376);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 21);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Count";
+            // 
+            // txbPasswords
+            // 
+            this.txbPasswords.Location = new System.Drawing.Point(12, 12);
+            this.txbPasswords.MaxLength = 3100000;
+            this.txbPasswords.Name = "txbPasswords";
+            this.txbPasswords.Size = new System.Drawing.Size(612, 242);
+            this.txbPasswords.TabIndex = 12;
+            this.txbPasswords.Text = "";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 509);
+            this.Controls.Add(this.txbPasswords);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.nudCount);
             this.Controls.Add(this.chkbxDefault);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nudLength);
@@ -157,18 +194,16 @@
             this.Controls.Add(this.chkbxNumbers);
             this.Controls.Add(this.chkbxLetters);
             this.Controls.Add(this.btnGenerate);
-            this.Controls.Add(this.txbPasswords);
             this.Name = "MainForm";
             this.Text = "Password Generator";
             ((System.ComponentModel.ISupportInitialize)(this.nudLength)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txbPasswords;
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.CheckBox chkbxLetters;
         private System.Windows.Forms.CheckBox chkbxNumbers;
@@ -178,6 +213,9 @@
         private System.Windows.Forms.NumericUpDown nudLength;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkbxDefault;
+        private System.Windows.Forms.NumericUpDown nudCount;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox txbPasswords;
     }
 }
 
