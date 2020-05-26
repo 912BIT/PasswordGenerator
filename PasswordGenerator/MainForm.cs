@@ -81,10 +81,12 @@ namespace PasswordGenerator
                 }
 
                 string letters = "abcdefghijklmnopqrstuvwxyz";
+                string specials = @"!@#$%^&*()-+;:?{}[]\/|<>";
                 string password = string.Empty;
                 Random rnd = new Random();
                 Option rndOption;
 
+                txbPasswords.Text = string.Empty;
                 for (int k = 0; k < Convert.ToInt32(nudCount.Value); k++)
                 {
                     for (int i = 0; i < Convert.ToInt32(nudLength.Value); i++)
@@ -103,6 +105,7 @@ namespace PasswordGenerator
                                 password += letters[rnd.Next(0, letters.Length)];
                                 break;
                             case Option.Special:
+                                password += specials[rnd.Next(0, specials.Length)];
                                 break;
                         }
                     }
