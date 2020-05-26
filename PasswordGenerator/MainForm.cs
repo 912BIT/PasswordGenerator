@@ -107,5 +107,13 @@ namespace PasswordGenerator
                 txbPasswords.Text = password;
             }
         }
+
+        private void chkbxLetters_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool status = ((CheckBox)sender).Checked;
+
+            chkbxLower.Enabled = status;
+            chkbxUpper.Enabled = status;
+        }
     }
 }

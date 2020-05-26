@@ -46,14 +46,14 @@
             this.txbPasswords.Location = new System.Drawing.Point(12, 12);
             this.txbPasswords.Multiline = true;
             this.txbPasswords.Name = "txbPasswords";
-            this.txbPasswords.Size = new System.Drawing.Size(612, 304);
+            this.txbPasswords.Size = new System.Drawing.Size(612, 242);
             this.txbPasswords.TabIndex = 0;
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(12, 431);
+            this.btnGenerate.Location = new System.Drawing.Point(12, 439);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(612, 66);
+            this.btnGenerate.Size = new System.Drawing.Size(612, 58);
             this.btnGenerate.TabIndex = 1;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = true;
@@ -62,17 +62,18 @@
             // chkbxLetters
             // 
             this.chkbxLetters.AutoSize = true;
-            this.chkbxLetters.Location = new System.Drawing.Point(12, 356);
+            this.chkbxLetters.Location = new System.Drawing.Point(12, 283);
             this.chkbxLetters.Name = "chkbxLetters";
             this.chkbxLetters.Size = new System.Drawing.Size(60, 17);
             this.chkbxLetters.TabIndex = 2;
             this.chkbxLetters.Text = "Letters";
             this.chkbxLetters.UseVisualStyleBackColor = true;
+            this.chkbxLetters.CheckStateChanged += new System.EventHandler(this.chkbxLetters_CheckStateChanged);
             // 
             // chkbxNumbers
             // 
             this.chkbxNumbers.AutoSize = true;
-            this.chkbxNumbers.Location = new System.Drawing.Point(78, 356);
+            this.chkbxNumbers.Location = new System.Drawing.Point(12, 375);
             this.chkbxNumbers.Name = "chkbxNumbers";
             this.chkbxNumbers.Size = new System.Drawing.Size(68, 17);
             this.chkbxNumbers.TabIndex = 3;
@@ -82,7 +83,7 @@
             // chkbxSpecial
             // 
             this.chkbxSpecial.AutoSize = true;
-            this.chkbxSpecial.Location = new System.Drawing.Point(152, 356);
+            this.chkbxSpecial.Location = new System.Drawing.Point(12, 352);
             this.chkbxSpecial.Name = "chkbxSpecial";
             this.chkbxSpecial.Size = new System.Drawing.Size(113, 17);
             this.chkbxSpecial.TabIndex = 4;
@@ -92,7 +93,7 @@
             // chkbxUpper
             // 
             this.chkbxUpper.AutoSize = true;
-            this.chkbxUpper.Location = new System.Drawing.Point(271, 356);
+            this.chkbxUpper.Location = new System.Drawing.Point(31, 306);
             this.chkbxUpper.Name = "chkbxUpper";
             this.chkbxUpper.Size = new System.Drawing.Size(80, 17);
             this.chkbxUpper.TabIndex = 5;
@@ -102,7 +103,7 @@
             // chkbxLower
             // 
             this.chkbxLower.AutoSize = true;
-            this.chkbxLower.Location = new System.Drawing.Point(357, 356);
+            this.chkbxLower.Location = new System.Drawing.Point(31, 329);
             this.chkbxLower.Name = "chkbxLower";
             this.chkbxLower.Size = new System.Drawing.Size(80, 17);
             this.chkbxLower.TabIndex = 6;
@@ -111,7 +112,7 @@
             // 
             // nudLength
             // 
-            this.nudLength.Location = new System.Drawing.Point(12, 391);
+            this.nudLength.Location = new System.Drawing.Point(12, 398);
             this.nudLength.Maximum = new decimal(new int[] {
             300,
             0,
@@ -123,7 +124,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(98, 393);
+            this.label1.Location = new System.Drawing.Point(98, 400);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 21);
             this.label1.TabIndex = 8;
@@ -134,7 +135,7 @@
             this.chkbxDefault.AutoSize = true;
             this.chkbxDefault.Checked = true;
             this.chkbxDefault.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkbxDefault.Location = new System.Drawing.Point(12, 322);
+            this.chkbxDefault.Location = new System.Drawing.Point(12, 260);
             this.chkbxDefault.Name = "chkbxDefault";
             this.chkbxDefault.Size = new System.Drawing.Size(61, 17);
             this.chkbxDefault.TabIndex = 9;
