@@ -139,6 +139,7 @@
             this.chkbxDefault.TabIndex = 9;
             this.chkbxDefault.Text = "Default";
             this.chkbxDefault.UseVisualStyleBackColor = true;
+            this.chkbxDefault.CheckStateChanged += new System.EventHandler(this.chkbxDefault_CheckStateChanged);
             // 
             // MainForm
             // 

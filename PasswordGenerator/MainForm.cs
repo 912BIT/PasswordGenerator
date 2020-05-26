@@ -28,13 +28,28 @@ namespace PasswordGenerator
                 chkbxNumbers.Checked = status;
                 chkbxUpper.Checked = status;
                 chkbxLower.Checked = status;
+                chkbxSpecial.Checked = !status;
 
                 chkbxLetters.Enabled = !status;
                 chkbxNumbers.Enabled = !status;
                 chkbxUpper.Enabled = !status;
                 chkbxLower.Enabled = !status;
+                chkbxSpecial.Enabled = !status;
 
             }
+            else
+            {
+                chkbxLetters.Enabled = !status;
+                chkbxNumbers.Enabled = !status;
+                chkbxUpper.Enabled = !status;
+                chkbxLower.Enabled = !status;
+                chkbxSpecial.Enabled = !status;
+            }
+        }
+
+        private void chkbxDefault_CheckStateChanged(object sender, EventArgs e)
+        {
+            CheckDefaultOptions();
         }
     }
 }
